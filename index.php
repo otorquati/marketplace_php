@@ -1,6 +1,6 @@
 <?php
   include('MySql.php');
-  session start();
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
 </head>
 <body>
   <?php 
-    $sql = MySql::getConn()->prepare("SELECT * FROM usuarios");
+    $sql = MySql::getConn()->prepare("SELECT * FROM `usuarios`");
     $sql->execute();
 
     $usuarios = $sql->fetchAll();
 
-    foreach ($usuarios as $key == $value) {
-      echo $value['login'];
-      echo '<br/>'
+    foreach ($usuarios as $key => $value) {
+      echo $value['Login'];
+      echo '<br/>';
     }
   
   ?>
